@@ -351,7 +351,10 @@ expublic int start_daemon_idle(void)
         }
 
         /* Set new file permissions */
+        /*
+         * - why? See Bug #901 08/08/2025
         umask(0);
+        */
         /* Deatch from terminal */
         setsid();
 
